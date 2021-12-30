@@ -4,9 +4,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Header from './components/Header';
 import Checkout from './components/Checkout';
-
+import Home from './components/Home';
 function App() {
   return (
     <Router>
@@ -14,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<h1>Login</h1>}/>
           <Route path="/checkout" element={<Checkout/>}/>
-          <Route path="/" element={<Header/>}/>
+          <Route path="/" element={<Home/>}/>
         </Routes>
       </div>
     </Router>
