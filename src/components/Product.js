@@ -1,6 +1,22 @@
 import React from 'react'
 import "./Product.css"
+import { useDispatch } from "react-redux"
 function Product({ id, title, image, price, rating }) {
+    const dispatch=useDispatch();
+    const addToBasket=(e)=>{
+        e.preventDefault();
+        //add item to basket
+        dispatch({
+            type:"ADD_TO_BASKET",
+            item:{
+                id,
+                title,
+                image,
+                price,
+                rating
+            }
+        })
+    }
     return (
         <div className='product'>
             <div className="product__info">
@@ -18,7 +34,7 @@ function Product({ id, title, image, price, rating }) {
                 </div>
             </div>
             <img src={image} alt={title} />
-            <button>Add to basket</button>
+            <button onClick={addToBasket}>Add to basket</button>
         </div>
     )
 }

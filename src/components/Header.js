@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import "./Header.css"
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import ShoppingBasketRoundedIcon from '@mui/icons-material/ShoppingBasketRounded';
+import { useSelector } from "react-redux"
 function Header() {
+    const basket=useSelector((state)=>state);
+    // console.log(basket);
     return (
         <nav className='header'>
             {/* logo on the left */}
@@ -45,7 +48,7 @@ function Header() {
                         {/* icon */}
                         <ShoppingBasketRoundedIcon/>
                         {/* number of item in the basket */}
-                        <span className='header__optionLineTwo header__basketCount'>0</span>
+                        <span className='header__optionLineTwo header__basketCount'>{basket.basket.length}</span>
                     </div>
                 </Link>
             </div>
