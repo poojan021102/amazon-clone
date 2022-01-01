@@ -12,14 +12,14 @@ function Home() {
                 {/* Products */}
                 <div className="home__row">
                     <Product
-                        id="123456"
-                        title="The Lean Startup:How constant innovation creates a radically successfull business"
+                        id="1"
+                        title="The Lean Startup"
                         price={11.96}
                         rating={5}
                         image="https://th.bing.com/th/id/OIP.negu8toIAIp0qjr77J88-QHaLM?w=118&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
                     />
                     <Product
-                        id="123456"
+                        id="2"
                         title="Apple iPhone 13 Mini - Blue"
                         price={11.96}
                         rating={5}
@@ -28,21 +28,21 @@ function Home() {
                 </div>
                 <div className="home__row">
                     <Product
-                        id="123456"
+                        id="3"
                         title="Mixer"
                         price={11.96}
                         rating={4}
                         image="https://m.media-amazon.com/images/I/51a02ZDkk6S._SL1000_.jpg"
                     />
                     <Product
-                        id="123456"
+                        id="4"
                         title="Think and Grow Rich"
                         price={11.96}
                         rating={5}
                         image="https://images-na.ssl-images-amazon.com/images/I/41+eK8zBwQL._SX319_BO1,204,203,200_.jpg"
                     />
                     <Product
-                        id="123456"
+                        id="5"
                         title="Echo Dot"
                         price={11.96}
                         rating={5}
@@ -51,7 +51,7 @@ function Home() {
                 </div>
                 <div className="home__row">
                     <Product
-                        id="123456"
+                        id="6"
                         title="Sony Bravia 80 cm (32 inches) HD Ready Smart LED TV 32W6103 (Black)"
                         price={11.96}
                         rating={5}

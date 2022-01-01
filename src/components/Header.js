@@ -4,8 +4,14 @@ import "./Header.css"
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import ShoppingBasketRoundedIcon from '@mui/icons-material/ShoppingBasketRounded';
 import { useSelector } from "react-redux"
+import auth from '../firebase';
+import { signOut } from 'firebase/auth';
 function Header() {
     const basket=useSelector((state)=>state);
+    const user=basket.user;
+    const login=()=>{
+        signOut(auth);
+    }
     // console.log(basket);
     return (
         <nav className='header'>
@@ -22,10 +28,10 @@ function Header() {
             </div>
             <div className="header__nav">
                 {/* first link */}
-                <Link className="header__link" to="/login">
-                    <div className="header__option">
-                        <span className='header__optionLineOne'>Hello Poojan</span>
-                        <span className='header__optionLineTwo'>Sign In</span>
+                <Link className="header__link" to={!user&&"/login"}>
+                    <div onClick={login} className="header__option">
+                        <span className='header__optionLineOne'>Hello {user===null?"user":user.email}</span>
+                        <span className='header__optionLineTwo'>{user?"Sign Out":"Sign In"}</span>
                     </div>
                 </Link>
                 {/* second link */}
